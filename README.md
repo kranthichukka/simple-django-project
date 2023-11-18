@@ -1,40 +1,40 @@
 # simple-django-project
 ## Installation
+- I update the readme file for installation and running the project because the main repository is very old and no more details about installation and running the project.
+- I update aslo ```world/models.py``` file because main file have a ```Tab space``` issues.
+- I run this project on AWS EC2 Instance ```Ubuntu Server 22.04 LTS``` OS Image. so, follow below requirements.
 
 ### Prerequisites
+Follow the steps from the below:
 
 #### 1. Install Python
-Install ```python-3.7``` and ```python-pip```. Follow the steps from the below reference document based on your Operating System.
+Install ```python-3.7```.
 
 ```
+# add repository
 sudo apt update
 sudo add-apt-repository ppa:deadsnakes/ppa
 
+# install python 
 sudo apt install python3.7
 python3.7 --version
 ```
-
-Install pip
+#### 2. Install pip  
+Install pip ```python3-pip```.
 
 ```
 sudo apt install python3-pip
 pip --version
 ```
 
-
-
-#### 2. Install MySQL and other dependency
-Install ```mysql-8```. Follow the steps form the below reference document based on your Operating System.
-Reference: [https://dev.mysql.com/doc/refman/5.5/en/](https://dev.mysql.com/doc/refman/5.5/en/)
-
+#### 3. Install MySQL and other dependency
+Install ```mysql-8```.
 ```
 sudo apt install mysql-server python3.7-distutils python3.7-dev libmysqlclient-dev
 ```
 
-
-
-#### 3. Setup virtual environment
-```bash
+#### 4. Setup virtual environment
+```
 # Install virtual environment
 sudo pip install virtualenv
 .
@@ -51,23 +51,23 @@ virtualenv -p /usr/bin/python3.7 ./envs
 source envs/bin/activate
 ```
 
-#### 4. Clone git repository
-```bash
+#### 5. Clone git repository
+```
 git clone https://github.com/bjnandi/simple-django-project.git
 ```
 
-#### 5. Install requirements
-```bash
+#### 6. Install project requirements
+```
 cd simple-django-project/
 pip install -r requirements.txt
 ```
 
-#### 6. Load sample data into MySQL
-```bash
+#### 7. Load sample data into MySQL
+```
 # open mysql bash
-mysql -u <mysql-user> -p
-# Create user, set password & given permission
+mysql -u root -p
 
+# Create user, set password & given permission
 create user 'django'@'localhost' identified by 'password123';
 grant usage on *.* to 'django'@'localhost';
 grant all privileges on world.* to 'django'@'localhost';
@@ -75,11 +75,12 @@ grant all privileges on world.* to 'django'@'localhost';
 # Give the absolute path of the file
 source /home/ubuntu/simple-django-project/world.sql
 exit;
-
 ```
-#### 7. Edit project settings
-```bash
-# open settings file
+
+#### 8. Edit project settings
+Here I put demo database information for testing purpose and I use [https://mailtrap.io/](https://mailtrap.io/) for get OTP in email. You can follow [https://help.mailtrap.io/article/109-getting-started-with-mailtrap-email-testing](https://help.mailtrap.io/article/109-getting-started-with-mailtrap-email-testing) for getting ```Credentials``` & test email to get OTP.
+```
+# Open settings file
 nano panorbit/settings.py
 
 # Edit Database configurations with your MySQL configurations.
@@ -88,25 +89,25 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'world',
-        'USER': '<mysql-user>',
-        'PASSWORD': '<mysql-password>',
-        'HOST': '<mysql-host>',
-        'PORT': '<mysql-port>',
+        'USER': 'django',
+        'PASSWORD': 'password123,
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
 # Edit email configurations.
 # Search for email configurations
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '<your-email>'
-EMAIL_HOST_PASSWORD = '<your-email-password>'
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '<Username>'
+EMAIL_HOST_PASSWORD = '<Password>'
 EMAIL_PORT = 587
 
 # save the file
 ```
-#### 8. Run the server
-```bash
+#### 9. Run the server
+```
 # Make migrations
 python manage.py makemigrations
 python manage.py migrate
@@ -122,18 +123,26 @@ python manage.py runserver 0:8001
 Try opening [http://public_IP:8001](http://public_IP:8001) in the browser.
 Now you are good to go.
 
-### 9. URLs
+### 10. URLs
 #### Signup: [http://public_IP:8001/signup](http://public_IP:8001/signup)
 ![Screenshot](/Screenshot/Screenshot_1.jpg)
+<br>
 #### Login: [http://public_IP:8001/login](http://public_IP:8001/login)
 ![Screenshot](/Screenshot/Screenshot_2.jpg)
-
-#### Login: [http://public_IP:8001/login](http://public_IP:8001/login)
+<br>
+#### Mailtrap OTP  [https://mailtrap.io/inboxes/](https://mailtrap.io/inboxes/)
 ![Screenshot](/Screenshot/Screenshot_3.jpg)
-
-#### home for search: [http://public_IP:8001/](http://public_IP:8001/)
+<br>
+#### Home for search: [http://public_IP:8001/](http://public_IP:8001/)
 ![Screenshot](/Screenshot/Screenshot_4.jpg)
-#### country page: [http://public_IP:8001/country/bangladesh](http://public_IP:8001/country/bangladesh)
+<br>
+#### Country page: [http://public_IP:8001/country/bangladesh](http://public_IP:8001/country/bangladesh)
 ![Screenshot](/Screenshot/Screenshot_5.jpg)
+<br>
 #### Logout: [http://public_IP:8001/logout](http://public_IP:8001/logout)
+<br><br>
+<b>If you face any quarry for this project feel free to contact me. I will try my best. Thank you</b>
+```
+https://www.linkedin.com/in/bjnandi/
+```
 
