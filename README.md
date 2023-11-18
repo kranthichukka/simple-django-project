@@ -2,13 +2,13 @@
 ## Installation
 - I update the readme file for installation and running the project because the main repository is very old and no more details about installation and running the project.
 - I update aslo ```world/models.py``` file because main file have a ```Tab space``` issues.
-- I run this project on AWS EC2 Instance ```Ubuntu Server 22.04 LTS``` OS Image. so, follow below requirements.
+- I run this project on AWS EC2 Instance ```Ubuntu Server 22.04 LTS``` OS Image. so, I my case I follow below requirements.
 
 ### Prerequisites
 Follow the steps from the below:
 
 #### 1. Install Python
-Install ```python-3.7```.
+Install ```python-3.7```
 
 ```
 # add repository
@@ -20,7 +20,7 @@ sudo apt install python3.7
 python3.7 --version
 ```
 #### 2. Install pip  
-Install pip ```python3-pip```.
+Install pip ```python3-pip```
 
 ```
 sudo apt install python3-pip
@@ -28,7 +28,7 @@ pip --version
 ```
 
 #### 3. Install MySQL and other dependency
-Install ```mysql-8```.
+Install ```mysql-8``` & dependency
 ```
 sudo apt install mysql-server python3.7-distutils python3.7-dev libmysqlclient-dev
 ```
@@ -37,7 +37,7 @@ sudo apt install mysql-server python3.7-distutils python3.7-dev libmysqlclient-d
 ```
 # Install virtual environment
 sudo pip install virtualenv
-.
+
 # Make a directory
 mkdir envs
 
@@ -62,7 +62,7 @@ cd simple-django-project/
 pip install -r requirements.txt
 ```
 
-#### 7. Load sample data into MySQL
+#### 7. Create User & Load sample data into MySQL
 ```
 # open mysql bash
 mysql -u root -p
@@ -140,7 +140,7 @@ Now you are good to go.
 ![Screenshot](/Screenshot/Screenshot_5.jpg)
 <br>
 #### Logout: [http://public_IP:8001/logout](http://public_IP:8001/logout)
-<br><br>
+<br>
 <b>If you face any quarry for this project feel free to contact me. I will try my best. Thank you</b>
 ```
 https://www.linkedin.com/in/bjnandi/
