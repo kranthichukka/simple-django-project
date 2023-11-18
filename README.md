@@ -82,6 +82,9 @@ Here I put demo database information for testing purpose and I use [https://mail
 # Open settings file
 nano panorbit/settings.py
 
+# Open Host (Add you host public IP address)
+ALLOWED_HOSTS = ["c9ae666b.ngrok.io","35.173.130.201", "localhost"]
+
 # Edit Database configurations with your MySQL configurations.
 # Search for DATABASES section.
 DATABASES = {
