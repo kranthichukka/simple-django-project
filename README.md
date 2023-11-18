@@ -63,8 +63,8 @@ pip install -r requirements.txt
 
 #### 7. Create User & Load sample data into MySQL
 ```
-# open mysql bash
-mysql -u root -p
+# Open mysql bash
+sudo mysql -u root -p
 
 # Create user, set password & given permission
 create user 'django'@'localhost' identified by 'password123';
