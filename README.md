@@ -4,12 +4,35 @@
 ### Prerequisites
 
 #### 1. Install Python
-Install ```python-3.7.2``` and ```python-pip```. Follow the steps from the below reference document based on your Operating System.
-Reference: [https://docs.python-guide.org/starting/installation/](https://docs.python-guide.org/starting/installation/)
+Install ```python-3.7``` and ```python-pip```. Follow the steps from the below reference document based on your Operating System.
 
-#### 2. Install MySQL
-Install ```mysql-8.0.15```. Follow the steps form the below reference document based on your Operating System.
+```
+sudo apt update
+sudo add-apt-repository ppa:deadsnakes/ppa
+
+sudo apt install python3.7
+python3.7 --version
+```
+
+Install pip
+
+```
+sudo apt install python3-pip
+pip --version
+```
+
+
+
+#### 2. Install MySQL and other dependency
+Install ```mysql-8```. Follow the steps form the below reference document based on your Operating System.
 Reference: [https://dev.mysql.com/doc/refman/5.5/en/](https://dev.mysql.com/doc/refman/5.5/en/)
+
+```
+sudo apt install mysql-server python3.7-distutils python3.7-dev libmysqlclient-dev
+```
+
+
+
 #### 3. Setup virtual environment
 ```bash
 # Install virtual environment
@@ -18,8 +41,11 @@ sudo pip install virtualenv
 # Make a directory
 mkdir envs
 
+# Find location of python3.7
+which python3.7
+
 # Create virtual environment
-virtualenv ./envs/
+virtualenv -p /usr/bin/python3.7 ./envs
 
 # Activate virtual environment
 source envs/bin/activate
@@ -27,7 +53,7 @@ source envs/bin/activate
 
 #### 4. Clone git repository
 ```bash
-git clone "https://github.com/Manisha-Bayya/simple-django-project.git"
+git clone https://github.com/bjnandi/simple-django-project.git
 ```
 
 #### 5. Install requirements
@@ -40,16 +66,21 @@ pip install -r requirements.txt
 ```bash
 # open mysql bash
 mysql -u <mysql-user> -p
+# Create user, set password & given permission
+
+create user 'django'@'localhost' identified by 'password123';
+grant usage on *.* to 'django'@'localhost';
+grant all privileges on world.* to 'django'@'localhost';
 
 # Give the absolute path of the file
-mysql> source ~/simple-django-project/world.sql
-mysql> exit;
+source /home/ubuntu/simple-django-project/world.sql
+exit;
 
 ```
 #### 7. Edit project settings
 ```bash
 # open settings file
-vim panorbit/settings.py
+nano panorbit/settings.py
 
 # Edit Database configurations with your MySQL configurations.
 # Search for DATABASES section.
