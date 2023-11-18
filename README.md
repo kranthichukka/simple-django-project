@@ -120,7 +120,7 @@ python manage.py runserver 0:8001
 # your server is up on port 8001
 ```
 Try opening [http://public_IP:8001](http://public_IP:8001) in the browser.
-Now you are good to go.
+Now you are good to go. if any issue check aws security groups the ```port``` is open or not.
 
 ### 10. URLs
 #### Signup: [http://public_IP:8001/signup](http://public_IP:8001/signup)
