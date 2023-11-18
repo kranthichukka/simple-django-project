@@ -119,17 +119,21 @@ python manage.py runserver 0:8001
 
 # your server is up on port 8001
 ```
-Try opening [http://localhost:8001](http://localhost:8001) in the browser.
+Try opening [http://public_IP:8001](http://public_IP:8001) in the browser.
 Now you are good to go.
 
 ### 9. URLs
-#### Signup: [http://localhost:8001/signup](http://localhost:8001/signup)
-![](https://i.imgur.com/T1KkfXi.png)
-#### Login: [http://localhost:8001/login](http://localhost:8001/login)
-![](https://i.imgur.com/KvyiuU6.png)
-#### home for search: [http://localhost:8001/](http://localhost:8001/)
-![](https://i.imgur.com/234qAiS.png)
-#### country page: [http://localhost:8001/country/kenya](http://localhost:8001/country/kenya)
-![](https://i.imgur.com/3zh3YKd.png)
-#### Logout: [http://localhost:8001/logout](http://localhost:8001/logout)
+#### Signup: [http://public_IP:8001/signup](http://public_IP:8001/signup)
+![](https://prnt.sc/uFFwSqFNLUp1)
+#### Login: [http://public_IP:8001/login](http://public_IP:8001/login)
+![](https://prnt.sc/26bKePUbi4gn)
+
+#### Login: [http://public_IP:8001/login](http://public_IP:8001/login)
+![](https://prnt.sc/E9qKqbdkivRI)
+
+#### home for search: [http://public_IP:8001/](http://public_IP:8001/)
+![](https://prnt.sc/DXsLrTDPn11J)
+#### country page: [http://public_IP:8001/country/bangladesh](http://public_IP:8001/country/bangladesh)
+![](https://prnt.sc/cN-8n4A5gnQK)
+#### Logout: [http://public_IP:8001/logout](http://public_IP:8001/logout)
 
