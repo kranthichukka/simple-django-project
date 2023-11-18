@@ -1,11 +1,10 @@
 # simple-django-project
 ## Installation
 - I update the readme file for installation and running the project because the main repository is very old and no more details about installation and running the project.
-- I update aslo ```world/models.py``` file because main file have a ```Tab space``` issues.
+- I update aslo ```world/models.py``` file, because main file have a ```Tab space``` issues.
 - I run this project on AWS EC2 Instance ```Ubuntu Server 22.04 LTS``` OS Image. so, I my case I follow below requirements.
 
 ### Prerequisites
-Follow the steps from the below:
 
 #### 1. Install Python
 Install ```python-3.7```
