@@ -124,16 +124,16 @@ Now you are good to go.
 
 ### 9. URLs
 #### Signup: [http://public_IP:8001/signup](http://public_IP:8001/signup)
-![](https://prnt.sc/uFFwSqFNLUp1)
+![Screenshot](https://prnt.sc/uFFwSqFNLUp1)
 #### Login: [http://public_IP:8001/login](http://public_IP:8001/login)
-![](https://prnt.sc/26bKePUbi4gn)
+![Screenshot](https://prnt.sc/26bKePUbi4gn)
 
 #### Login: [http://public_IP:8001/login](http://public_IP:8001/login)
-![](https://prnt.sc/E9qKqbdkivRI)
+![Screenshot](https://prnt.sc/E9qKqbdkivRI)
 
 #### home for search: [http://public_IP:8001/](http://public_IP:8001/)
-![](https://prnt.sc/DXsLrTDPn11J)
+![Screenshot](https://prnt.sc/DXsLrTDPn11J)
 #### country page: [http://public_IP:8001/country/bangladesh](http://public_IP:8001/country/bangladesh)
-![](https://prnt.sc/cN-8n4A5gnQK)
+![Screenshot](https://prnt.sc/cN-8n4A5gnQK)
 #### Logout: [http://public_IP:8001/logout](http://public_IP:8001/logout)
 
